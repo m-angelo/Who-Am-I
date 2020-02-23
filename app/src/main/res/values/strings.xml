@@ -1,0 +1,20 @@
+<resources>
+    <string name="facebook_app_id" translatable="false">737351183326096</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb737351183326096</string>
+    <string name="app_name">Who am I?</string>
+    <string name="credits">Devs</string>
+    <string name="lang">Language</string>
+    <string name="sounds">Sounds</string>
+    <string name="notify">Notifications</string>
+    <string name="last_notify">Last notifications</string>
+    <string name="your_profile">Your profile</string>
+    <string name="level">Level</string>
+    <string name="hobby">Hobbies</string>
+    <string name="culture">Culture</string>
+    <string name="beliefs">Beliefs</string>
+    <string name="morality">Morality</string>
+    <string name="relationships">Relationships</string>
+    <string name="relation_w">Relation with</string>
+    <string name="play">Play</string>
+
+</resources>

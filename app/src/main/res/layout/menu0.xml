@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5"
+    android:clipToPadding="true"
+    android:fillViewport="true"
+    android:scrollbarStyle="insideOverlay"
+    tools:context=".Menu">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47000003">
+
+        <TextView
+            android:id="@+id/titleview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/caviar"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="40sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+        <ImageView
+            android:id="@+id/connect1"
+            android:layout_width="130dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:foregroundTintMode="add"
+            android:rotation="135"
+            android:scaleType="centerCrop"
+            android:src="@drawable/just_rect"
+            android:tint="#6d52c5"
+            app:layout_constraintBottom_toBottomOf="@+id/find"
+            app:layout_constraintEnd_toEndOf="@+id/you"
+            app:layout_constraintStart_toStartOf="@+id/find"
+            app:layout_constraintTop_toTopOf="@+id/you"
+            app:srcCompat="@drawable/just_rect" />
+
+        <ImageView
+            android:id="@+id/connect5"
+            android:layout_width="202dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:rotation="25"
+            android:scaleType="centerCrop"
+            android:src="@drawable/just_rect"
+            android:tint="#de2a2a"
+            app:layout_constraintBottom_toBottomOf="@+id/map"
+            app:layout_constraintEnd_toEndOf="@+id/find"
+            app:layout_constraintStart_toStartOf="@+id/map"
+            app:layout_constraintTop_toTopOf="@+id/find" />
+
+        <ImageView
+            android:id="@+id/connect6"
+            android:layout_width="249dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:rotation="-25"
+            android:scaleType="centerCrop"
+            android:src="@drawable/just_rect"
+            android:tint="#4267b2"
+            app:layout_constraintBottom_toBottomOf="@+id/listBTN"
+            app:layout_constraintEnd_toEndOf="@+id/listBTN"
+            app:layout_constraintStart_toStartOf="@+id/map"
+            app:layout_constraintTop_toTopOf="@+id/map" />
+
+        <ImageView
+            android:id="@+id/connect7"
+            android:layout_width="202dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="8dp"
+            android:rotation="25"
+            android:scaleType="centerCrop"
+            android:src="@drawable/just_rect"
+            android:tint="#676767"
+            app:layout_constraintBottom_toBottomOf="@+id/settBTN"
+            app:layout_constraintEnd_toEndOf="@+id/listBTN"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="@+id/settBTN"
+            app:layout_constraintTop_toTopOf="@+id/listBTN" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/you"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleview"
+            fresco:roundAsCircle="true"
+            fresco:placeholderImage="@drawable/noone" />
+        <TextView
+            android:id="@+id/all_notify"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/round"
+            android:backgroundTint="#FF0000"
+            android:fontFamily="@font/caviar_bold"
+            android:text="4"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/you"
+            app:layout_constraintEnd_toEndOf="@+id/you"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toStartOf="@+id/you"
+            app:layout_constraintTop_toTopOf="@+id/you"
+            app:layout_constraintVertical_bias="0.93" />
+
+        <ImageButton
+            android:id="@+id/first"
+            android:layout_width="86dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/first"
+            android:transitionName="relation_transit"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/you" />
+
+        <ImageButton
+            android:id="@+id/second"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/second"
+            android:transitionName="relation_transit"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.84"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/first" />
+
+        <ImageButton
+            android:id="@+id/third"
+            android:layout_width="90dp"
+            android:layout_height="96dp"
+            android:background="@drawable/third"
+            android:transitionName="relation_transit"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/second" />
+
+        <ImageButton
+            android:id="@+id/find"
+            android:layout_width="95dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/findico"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/you" />
+
+        <ImageButton
+            android:id="@+id/settBTN"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sett"
+            android:transitionName="ConfigTransit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.84"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/listBTN" />
+
+        <ImageButton
+            android:id="@+id/listBTN"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@android:color/transparent"
+            android:elevation="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/list"
+            android:transitionName="ListTransit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/map" />
+
+        <ImageButton
+            android:id="@+id/map"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/geogroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.84"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/find" />
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settBTN" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

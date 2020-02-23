@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Who am I?</string>
+    <string name="credits">Entwickler</string>
+    <string name="beliefs">des Glaubens</string>
+    <string name="culture">Kultur</string>
+    <string name="hobby">Hobby</string>
+    <string name="morality">Moral</string>
+    <string name="relationships">Beziehungen</string>
+    <string name="play">Spielen</string>
+    <string name="level">Ebene</string>
+    <string name="your_profile">Dein Profil</string>
+    <string name="notify">Benachrichtigungen</string>
+    <string name="last_notify">Letzte Benachrichtigungen</string>
+    <string name="sounds">Ton</string>
+    <string name="lang">Sprache</string>
+    <string name="relation_w">Beziehung von</string>
+</resources>

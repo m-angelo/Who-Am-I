@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "895678022780",
+    "firebase_url": "https://who-am-i-2410.firebaseio.com",
+    "project_id": "who-am-i-2410",
+    "storage_bucket": "who-am-i-2410.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895678022780:android:78b4443682de9bb6",
+        "android_client_info": {
+          "package_name": "com.truncatedcone.app.whoami"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895678022780-egpm5vl9bqarkg06rcfvefue5dmoq7oo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.truncatedcone.app.whoami",
+            "certificate_hash": "6de848ca1aeb7256c701f5ce943b75c97eb92f35"
+          }
+        },
+        {
+          "client_id": "895678022780-75ocm5gcmatlvgfef0qrtah4bomb1clh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-CIQl_R_t_GrdaxtDna9ofTjDaSjNefw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895678022780-75ocm5gcmatlvgfef0qrtah4bomb1clh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

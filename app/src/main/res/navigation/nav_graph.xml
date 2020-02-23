@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login">
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.truncatedcone.app.whoami.Menu"
+        android:label="menu"
+        tools:layout="@layout/menu0">
+        <action
+            android:id="@+id/action_menu_to_relations"
+            app:destination="@id/relations"
+            app:enterAnim="@anim/frombot"
+            app:exitAnim="@anim/totop"
+            app:launchSingleTop="false"
+            app:popEnterAnim="@anim/fromtop"
+            app:popExitAnim="@anim/tobot">
+
+        </action>
+        <action
+            android:id="@+id/action_menu_to_settings"
+            app:destination="@id/settings"
+            app:enterAnim="@anim/fromtop"
+            app:exitAnim="@anim/tobot"
+            app:popEnterAnim="@anim/frombot"
+            app:popExitAnim="@anim/totop" />
+        <action
+            android:id="@+id/action_menu_to_friendlist"
+            app:destination="@id/friendlist"
+            app:enterAnim="@anim/fromtop"
+            app:exitAnim="@anim/tobot"
+            app:popEnterAnim="@anim/frombot"
+            app:popExitAnim="@anim/totop"
+            />
+        <action
+            android:id="@+id/action_menu_to_profile"
+            app:destination="@id/profile"
+            app:enterAnim="@anim/fromtop"
+            app:exitAnim="@anim/tobot"
+            app:popEnterAnim="@anim/frombot"
+            app:popExitAnim="@anim/totop" />
+        <action
+            android:id="@+id/action_menu_to_geo"
+            app:destination="@id/geo_groups"
+            app:enterAnim="@anim/fromtop"
+            app:exitAnim="@anim/tobot"
+            app:popEnterAnim="@anim/frombot"
+            app:popExitAnim="@anim/totop" />
+        <action
+            android:id="@+id/action_menu_to_matchLoader"
+            app:destination="@id/matchLoader"
+            app:enterAnim="@anim/fromtop"
+            app:exitAnim="@anim/tobot"
+            app:popEnterAnim="@anim/frombot"
+            app:popExitAnim="@anim/totop"
+            app:popUpTo="@+id/menu" />
+    </fragment>
+    <fragment android:id="@+id/meeting" />
+    <fragment android:id="@+id/chat" />
+    <fragment android:id="@+id/leaderboards" />
+    <fragment
+        android:id="@+id/relations"
+        android:name="com.truncatedcone.app.whoami.Relation"
+        android:label="relation"
+        tools:layout="@layout/relation" >
+        <action
+            android:id="@+id/action_relations_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_relations_to_meeting"
+            app:destination="@id/meeting" />
+        <argument
+            android:name="selected_id"
+            app:argType="string" />
+        <argument android:name="selected_lvl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_relations_to_startPlay"
+            app:destination="@id/startplay"
+            app:enterAnim="@anim/fromtop"
+            app:exitAnim="@anim/tobot"
+            app:popEnterAnim="@anim/frombot"
+            app:popExitAnim="@anim/totop" />
+        <argument android:name="pic"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.truncatedcone.app.whoami.Settings"
+        android:label="settings"
+        tools:layout="@layout/settings" >
+        <action
+            android:id="@+id/action_settings_to_lang"
+            app:destination="@id/lang"
+            app:enterAnim="@anim/frombot"
+            app:exitAnim="@anim/totop"
+            app:popEnterAnim="@anim/fromtop"
+            app:popExitAnim="@anim/tobot" />
+        <action
+            android:id="@+id/action_settings_to_login"
+            app:destination="@id/login"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendlist"
+        android:name="com.truncatedcone.app.whoami.Friendlist"
+        android:label="list"
+        tools:layout="@layout/list" >
+        <action
+            android:id="@+id/action_friendlist_to_relations"
+            app:destination="@id/relations"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout"
+            app:popEnterAnim="@anim/fadein"
+            app:popExitAnim="@anim/fadeout" />
+        <action
+            android:id="@+id/action_friendlist_to_startPlay"
+            app:destination="@id/startplay"
+            app:enterAnim="@anim/frombot"
+            app:exitAnim="@anim/totop"
+            app:popEnterAnim="@anim/fromtop"
+            app:popExitAnim="@anim/tobot" />
+        <argument android:name="names"
+            app:argType="string[]"/>
+        <argument android:name="levels"
+            app:argType="string[]"/>
+        <argument android:name="ages"
+            app:argType="string[]"/>
+        <argument android:name="pics"
+            app:argType="string[]"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.truncatedcone.app.whoami.Profile"
+        android:label="profile"
+        tools:layout="@layout/profile" >
+        <action
+            android:id="@+id/action_profile_to_leaderboards"
+            app:destination="@id/leaderboards" />
+        <action
+            android:id="@+id/action_profile_to_startPlay"
+            app:destination="@id/startplay"
+            app:enterAnim="@anim/frombot"
+            app:exitAnim="@anim/totop"
+            app:popEnterAnim="@anim/fromtop"
+            app:popExitAnim="@anim/tobot" />
+    </fragment>
+    <fragment
+        android:id="@+id/play"
+        android:name="com.truncatedcone.app.whoami.Play"
+        android:label="play"
+        tools:layout="@layout/play" >
+        <argument
+            android:name="selected_id"
+            app:argType="string" />
+        <argument
+            android:name="selected_categ"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_play_to_finish"
+            app:destination="@id/finish"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout"
+            app:popEnterAnim="@anim/fadein"
+            app:popExitAnim="@anim/fadeout"
+            app:popUpTo="@+id/menu"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="selected_lvl"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_play_to_levelUp"
+            app:destination="@id/levelUp"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout"
+            app:popEnterAnim="@anim/fadein"
+            app:popExitAnim="@anim/fadeout" />
+        <argument
+            android:name="Q1"
+            app:argType="string" />
+        <argument
+            android:name="A1"
+            app:argType="string" />
+        <argument
+            android:name="B1"
+            app:argType="string" />
+        <argument
+            android:name="C1"
+            app:argType="string" />
+        <argument
+            android:name="D1"
+            app:argType="string" />
+        <argument
+            android:name="Q2"
+            app:argType="string" />
+        <argument
+            android:name="A2"
+            app:argType="string" />
+        <argument
+            android:name="B2"
+            app:argType="string" />
+        <argument
+            android:name="C2"
+            app:argType="string" />
+        <argument
+            android:name="D2"
+            app:argType="string" />
+        <argument
+            android:name="Q3"
+            app:argType="string" />
+        <argument
+            android:name="A3"
+            app:argType="string" />
+        <argument
+            android:name="B3"
+            app:argType="string" />
+        <argument
+            android:name="C3"
+            app:argType="string" />
+        <argument
+            android:name="D3"
+            app:argType="string" />
+        <argument
+            android:name="pic"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/startplay"
+        android:name="com.truncatedcone.app.whoami.StartPlay"
+        android:label="start_play"
+        tools:layout="@layout/start_play" >
+        <action
+            android:id="@+id/action_startPlay_to_play"
+            app:destination="@id/play"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout"
+            app:popEnterAnim="@anim/fadeinlong"
+            app:popExitAnim="@anim/fadeoutlong"
+            app:popUpTo="@+id/menu"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="selected_lvl"
+            app:argType="string" />
+        <argument
+            android:name="selected_id"
+            app:argType="string" />
+        <argument android:name="selected_categ"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_startplay_to_rePlay"
+            app:destination="@id/rePlay" />
+        <argument
+            android:name="pic"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/geo_groups"
+        android:name="com.truncatedcone.app.whoami.Geogroups"
+        android:label="geo_groups"
+        tools:layout="@layout/geo_groups" >
+        <action
+            android:id="@+id/action_geo_groups_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_geo_groups_to_meeting"
+            app:destination="@id/meeting" />
+    </fragment>
+    <fragment
+        android:id="@+id/lang"
+        android:name="com.truncatedcone.app.whoami.Language"
+        android:label="lang_layout"
+        tools:layout="@layout/lang_layout" />
+    <fragment
+        android:id="@+id/login"
+        android:name="com.truncatedcone.app.whoami.Login"
+        android:label="login_view"
+        tools:layout="@layout/login_view" >
+        <action
+            android:id="@+id/action_login_to_menu"
+            app:destination="@id/menu"
+            app:enterAnim="@anim/fadeinlong"
+            app:exitAnim="@anim/fadeoutlong"
+            app:popUpTo="@+id/login"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_age2"
+            app:destination="@id/age"
+            app:enterAnim="@anim/frombot"
+            app:exitAnim="@anim/totop" />
+    </fragment>
+    <fragment
+        android:id="@+id/matcher"
+        android:name="com.truncatedcone.app.whoami.Matcher"
+        android:label="matcher_layout"
+        tools:layout="@layout/matcher_layout" >
+        <action
+            android:id="@+id/action_matcher_to_startplay"
+            app:destination="@id/startplay"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout"
+            app:popEnterAnim="@anim/fadein"
+            app:popExitAnim="@anim/fadeout" />
+        <action
+            android:id="@+id/action_matcher_to_chat"
+            app:destination="@id/chat" />
+        <argument
+            android:name="id1"
+            app:argType="string" />
+        <argument
+            android:name="id2"
+            app:argType="string" />
+        <argument
+            android:name="id3"
+            app:argType="string" />
+        <argument
+            android:name="id4"
+            app:argType="string" />
+        <argument
+            android:name="id5"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchLoader"
+        android:name="com.truncatedcone.app.whoami.MatchLoader"
+        android:label="match_loader"
+        tools:layout="@layout/match_loader" >
+        <action
+            android:id="@+id/action_matchLoader_to_matcher"
+            app:destination="@id/matcher"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout"
+            app:popEnterAnim="@anim/fadein"
+            app:popExitAnim="@anim/fadeout"
+            app:popUpTo="@+id/menu"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/rePlay"
+        android:name="com.truncatedcone.app.whoami.RePlay"
+        android:label="replay"
+        tools:layout="@layout/replay">
+    <argument
+        android:name="selected_id"
+        app:argType="string" />
+    <argument android:name="selected_categ"
+        app:argType="string" />
+        <action
+            android:id="@+id/action_rePlay_to_play"
+            app:destination="@id/play"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout" />
+        <argument android:name="selected_lvl" />
+        <action
+            android:id="@+id/action_rePlay_to_levelUp"
+            app:destination="@id/levelUp"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout"
+            app:popEnterAnim="@anim/fadein"
+            app:popExitAnim="@anim/fadeout" />
+    </fragment>
+    <fragment
+        android:id="@+id/finish"
+        android:name="com.truncatedcone.app.whoami.Finish"
+        android:label="finish_screen"
+        tools:layout="@layout/finish_screen" >
+        <action
+            android:id="@+id/action_finish_to_chat"
+            app:destination="@id/chat" />
+        <action
+            android:id="@+id/action_finish_to_matchLoader"
+            app:destination="@id/matchLoader"
+            app:enterAnim="@anim/fromtop"
+            app:exitAnim="@anim/totop"
+            app:popUpTo="@+id/menu" />
+        <action
+            android:id="@+id/action_finish_to_startplay"
+            app:destination="@id/startplay"
+            app:enterAnim="@anim/frombot"
+            app:exitAnim="@anim/totop"
+            app:popEnterAnim="@anim/frombot"
+            app:popExitAnim="@anim/totop" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelUp"
+        android:name="com.truncatedcone.app.whoami.LevelUp"
+        android:label="LevelUp" >
+        <action
+            android:id="@+id/action_levelUp_to_finish"
+            app:destination="@id/finish"
+            app:enterAnim="@anim/fadein"
+            app:exitAnim="@anim/fadeout"
+            app:popEnterAnim="@anim/fadein"
+            app:popExitAnim="@anim/fadeout"
+            app:popUpTo="@+id/menu" />
+        <action
+            android:id="@+id/action_levelUp_to_play"
+            app:destination="@id/play" />
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/age"
+        android:name="com.truncatedcone.app.whoami.Age"
+        android:label="age_selector"
+        tools:layout="@layout/age_selector" >
+        <action
+            android:id="@+id/action_age2_to_menu"
+            app:destination="@id/menu"
+            app:enterAnim="@anim/fadeinlong"
+            app:exitAnim="@anim/fadeoutlong" />
+    </fragment>
+</navigation>

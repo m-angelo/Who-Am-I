@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/login_view"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/frame"
+        android:layout_width="0dp"
+        android:layout_height="529dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/slide1"
+        app:layout_constraintBottom_toBottomOf="@+id/loginbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/fg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/loginfg"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fb_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="@+id/login_button"
+        app:layout_constraintStart_toStartOf="@+id/login_button"
+        app:layout_constraintTop_toTopOf="@+id/login_button" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/caviar"
+        android:text="@string/app_name"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/caviar"
+        android:scaleType="fitCenter"
+        android:text="Facebook\nLogin"
+        android:textAllCaps="false"
+        android:textSize="60sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.79" />
+
+
+    <com.eyalbira.loadingdots.LoadingDots xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/loginbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:visibility="invisible"
+
+        app:LoadingDots_auto_play="true"
+        app:LoadingDots_dots_color="#508AFF"
+        app:LoadingDots_dots_count="3"
+        app:LoadingDots_dots_size="40dp"
+
+        app:LoadingDots_dots_space="40dp"
+        app:LoadingDots_jump_duration="550"
+
+        app:LoadingDots_jump_height="10dp"
+        app:LoadingDots_loop_duration="1500"
+        app:LoadingDots_loop_start_delay="100"
+        app:layout_constraintBottom_toBottomOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="@+id/login_button"
+        app:layout_constraintStart_toStartOf="@+id/login_button"
+        app:layout_constraintTop_toTopOf="@+id/login_button" />
+</android.support.constraint.ConstraintLayout>

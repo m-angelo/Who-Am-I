@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="#f5f5f5"
+    tools:context=".Profile">
+
+    <ImageView
+        android:id="@+id/fade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/fade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/wave"
+        android:layout_width="449dp"
+        android:layout_height="708dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/wave_down"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <TextView
+        android:id="@+id/rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/caviar"
+        android:text="4209"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lvl_val"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@+id/lvl_val"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <TextView
+        android:id="@+id/lvl_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/caviar"
+        android:text="72"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/frame"
+        app:layout_constraintEnd_toEndOf="@+id/level"
+        app:layout_constraintStart_toStartOf="@+id/level"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_bias="0.35000002" />
+
+    <ImageView
+        android:id="@+id/rank_ico"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/achieve"
+        app:layout_constraintBottom_toBottomOf="@+id/frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.47000003"
+        app:srcCompat="@drawable/achieve" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/notify_list"
+        android:layout_width="380dp"
+        android:layout_height="435dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:clipToPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frame"
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/notification">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/prof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/caviar"
+        android:text="@string/your_profile"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="51dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/caviar"
+        android:text="@string/level"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rank_ico"
+        app:layout_constraintEnd_toStartOf="@+id/avatar"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rank_ico" />
+
+    <ImageView
+        android:id="@+id/frame"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:src="@drawable/profile_back"
+        app:layout_constraintBottom_toBottomOf="@+id/avatar"
+        app:layout_constraintEnd_toEndOf="@+id/avatar"
+        app:layout_constraintStart_toStartOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@+id/avatar"
+        app:srcCompat="@drawable/profile_back" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/avatar"
+        android:layout_width="99dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999"
+        fresco:placeholderImage="@drawable/noone"
+        fresco:roundAsCircle="true" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="111dp" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#22128e</color>
+    <color name="colorPrimaryDark">#de0c14</color>
+    <color name="gradient1">#CB22128E</color>
+    <color name="gradient2">#CBFF1500</color>
+    <color name="level1">#535353</color>
+    <color name="level2">#6F6F6F</color>
+    <color name="level3">#00FFE1</color>
+    <color name="level4">#00FF64</color>
+    <color name="level5">#2FFF00</color>
+    <color name="level6">#FFE600</color>
+    <color name="level7">#FFA725</color>
+    <color name="level8">#BB00FF</color>
+    <color name="level9">#FF00BF</color>
+    <color name="level10">#FF0000</color>
+
+    <color name="level1_gredient">#272727</color>
+    <color name="level2_gradient">#4D4D4D</color>
+    <color name="level3_gradient">#00BBA6</color>
+    <color name="level4_gradient">#00B645</color>
+    <color name="level5_gradient">#24C500</color>
+    <color name="level6_gradient">#C4B000</color>
+    <color name="level7_gradient">#D37F00</color>
+    <color name="level8_gradient">#9C00D1</color>
+    <color name="level9_gradient">#BE008E</color>
+    <color name="level10_gradient">#BD0000</color>
+
+</resources>
